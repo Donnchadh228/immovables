@@ -1,0 +1,86 @@
+.auth {
+	background-color: rgb(48, 54, 56);
+	height: auto;
+	flex-basis: 600px;
+	box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.6);
+	box-sizing: border-box;
+	padding: 40px 20px;
+	color: white;
+}
+.content {
+	padding: 50px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-attachment: fixed;
+	background-image: url("../img/background1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0% 100%;
+	position: relative;
+}
+
+.auth-title {
+	width: 200px;
+	margin: auto;
+	text-align: center;
+	font-size: 26px;
+	font-weight: bold;
+	border-bottom: 3px solid rgb(216, 178, 53);
+}
+.auth__inputs {
+	display: flex;
+	flex-direction: column;
+}
+.auth__inputs-block {
+	display: flex;
+	font-weight: 600;
+	padding: 10px;
+	justify-content: space-around;
+	margin-top: 20px;
+	font-size: 19px;
+	border-bottom: 3px solid rgb(216, 178, 53);
+}
+.auth__inputs-block label,
+.auth__inputs-block input {
+	flex-basis: 50%;
+	align-self: center;
+}
+.auth__inputs-block input {
+	font-size: 18px;
+	font-weight: 600;
+	height: 35px;
+	background-color: white;
+	box-sizing: border-box;
+	padding: 5px;
+	border-radius: 5px;
+	border-bottom: 0px solid rgb(216, 178, 53);
+}
+.auth__inputs-block input:focus {
+	outline: none;
+	box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.3);
+	animation: borderGradient 7s infinite;
+}
+.error {
+	text-align: center;
+	color: red;
+	font-size: 20px;
+	font-weight: 600;
+	margin-top: 10px;
+}
+.auth .red-button {
+	margin-top: 30px;
+	font-size: 23px;
+	letter-spacing: 2px;
+}
+@keyframes borderGradient {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

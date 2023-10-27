@@ -1,0 +1,320 @@
+.content__info {
+	width: 100%;
+	height: 350px;
+	background-attachment: fixed;
+	background-image: url("../img/background1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0% 100%;
+	position: relative;
+}
+.content__info::before {
+	content: " ";
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 20;
+	background-image: linear-gradient(
+		to top,
+		rgba(48, 54, 56, 0.3),
+		rgba(48, 54, 56, 0)
+	);
+}
+.content__info .container {
+	display: flex;
+	justify-content: space-around;
+	flex: 1;
+	height: 100%;
+}
+.content__info-left,
+.content__info-right {
+	flex-basis: 50%;
+	flex: 1;
+	padding: 20px;
+	font-size: 24px;
+}
+.content__info-left {
+	background-color: rgba(0, 0, 0, 0.6);
+
+	color: white;
+	font-weight: bold;
+}
+
+.content__info-left p {
+	margin-left: 20px;
+	font-weight: 400;
+	margin-top: 20px;
+	padding-bottom: 2px;
+	border-bottom: 1px solid white;
+}
+
+.content__info-left p:last-child {
+	margin-left: 40px;
+}
+.content__info-right {
+	color: black;
+	background-color: rgba(255, 255, 255, 0.6);
+	font-weight: bold;
+}
+
+.dflex {
+	display: flex;
+	height: 100%;
+}
+.container__info-left {
+	box-sizing: border-box;
+	width: 640px;
+	height: 100%;
+	margin-left: auto;
+	padding: 0px 10px;
+}
+.container__info-right h2 {
+	text-align: right;
+	margin-bottom: 75px;
+}
+.container__info-right {
+	box-sizing: border-box;
+	width: 640px;
+	text-align: center;
+	height: 100%;
+	margin-right: auto;
+	padding: 0px 10px;
+}
+
+.button-gray {
+	min-width: 270px;
+	min-height: 60px;
+	cursor: pointer;
+	display: inline-block;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(48, 54, 56);
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+	transition: background-color 0.3s ease;
+	box-shadow: 0px 0px 20px 7px rgba(0, 0, 0, 0.6);
+}
+.button-gray:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.2);
+	transition: transform 0.3s ease;
+}
+.button-gray:hover {
+	background-color: rgb(64, 71, 73);
+}
+
+.button-gray:hover:before {
+	transform: translateX(100%);
+}
+.immovables-title {
+	position: relative;
+	z-index: 2;
+	font-size: 26px;
+	text-align: center;
+	width: 340px;
+	margin: 20px auto 0px auto;
+	border-bottom: 3px solid rgb(216, 178, 53);
+	padding-bottom: 5px;
+}
+.immovables__blocks {
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.immovables__block {
+	z-index: 2;
+	min-height: 400px;
+	flex-basis: 25%;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	padding: 40px 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(48, 54, 56);
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	overflow: hidden;
+	position: relative;
+	margin-right: 10px;
+	margin-top: 20px;
+	transition: box-shadow 0.3s ease;
+}
+
+.immovables__block:hover {
+	box-shadow: 0px 0px 20px 7px rgba(0, 0, 0, 0.6);
+}
+.immovables__block:hover:hover .immovables__block-price {
+	transform: scale(1.1);
+}
+
+.immovables__block-title {
+	position: relative;
+	z-index: 5;
+	font-size: 22px;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+}
+.immovables__block-image {
+	width: 100%;
+	object-fit: cover;
+	height: 190px;
+	overflow: hidden;
+}
+.immovables__block-image img {
+	border-radius: 3px;
+	position: relative;
+	z-index: 5;
+	object-fit: cover;
+	width: 100%;
+	height: 190px;
+	transition: 0.3s transform;
+}
+.immovables__block-image:hover img {
+	transform: scale(1.1);
+}
+.immovables__block-date,
+.immovables__block-address {
+	position: relative;
+	z-index: 5;
+	text-align: left;
+	margin-top: 10px;
+}
+.immovables__block-price {
+	text-align: center;
+	z-index: 5;
+	position: absolute;
+	height: 20px;
+	padding: 5px;
+	top: 0px;
+	right: 0%;
+	left: 0%;
+	background-color: red;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	transition: 0.3s all;
+}
+
+.immovables__block-info {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	margin-bottom: 10px;
+}
+.red-button {
+	min-width: 250px;
+	min-height: 50px;
+	cursor: pointer;
+	display: inline-block;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #ef5350;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	overflow: hidden;
+	position: relative;
+	transition: background-color 0.3s ease;
+	box-shadow: 0px 0px 20px 7px rgba(255, 255, 255, 0.3);
+	align-self: center;
+	margin-top: auto;
+}
+
+.red-button:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.2);
+	transition: transform 0.3s ease;
+}
+
+.red-button:hover:before {
+	transform: translateX(100%);
+}
+.immovables-low {
+	color: white;
+	padding: 10px 0px;
+	background-attachment: fixed;
+	background-image: url("../img/background1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0% 100%;
+	position: relative;
+}
+.immovables-low::before {
+	z-index: 1;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.immovables-low .immovables__block:hover {
+	box-shadow: 0px 0px 20px 7px rgba(255, 255, 255, 0.6);
+}
+.immovables-low .immovables__block {
+	background-color: rgb(235, 234, 234);
+	color: black;
+}
+.immovables-low .red-button {
+	min-width: 250px;
+	min-height: 50px;
+	cursor: pointer;
+	display: inline-block;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(48, 54, 56);
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+	transition: background-color 0.3s ease;
+	box-shadow: 0px 0px 20px 7px rgba(0, 0, 0, 0.6);
+}
+
+.immovables-low .red-button:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.2);
+	transition: transform 0.3s ease;
+}
+.immovables-low .red-button:hover {
+	background-color: rgb(64, 71, 73);
+}
